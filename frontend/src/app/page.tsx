@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -29,40 +30,51 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-black">
-      <header className="border-b border-zinc-200 dark:border-zinc-800">
-        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-          <span className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+      <header className="absolute top-0 left-0 right-0 z-20">
+        <div className="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+          <span className="text-xl font-bold tracking-tight text-white drop-shadow">
             Future One
           </span>
-          <nav className="flex gap-6 text-sm text-zinc-600 dark:text-zinc-400">
-            <a href="#features" className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">Features</a>
-            <a href="#contact" className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">Contact</a>
+          <nav className="flex gap-6 text-sm text-zinc-200">
+            <a href="#features" className="hover:text-white transition-colors">Features</a>
+            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           </nav>
         </div>
       </header>
 
       <main className="flex-1">
-        <section className="max-w-5xl mx-auto px-6 py-24 text-center">
-          <h1 className="text-5xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-6xl">
-            Build the future,<br />one step at a time.
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
-            A modern full-stack platform powered by Next.js, Express, and Supabase.
-            Fast, scalable, and ready to grow with you.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-4">
-            <a
-              href="#contact"
-              className="rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200 transition-colors"
-            >
-              Get started
-            </a>
-            <a
-              href="#features"
-              className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-50 dark:border-zinc-700 dark:text-zinc-50 dark:hover:bg-zinc-900 transition-colors"
-            >
-              Learn more
-            </a>
+        <section className="relative flex items-center justify-center min-h-[80vh] overflow-hidden">
+          <Image
+            src="/hero.webp"
+            alt="Future One — Futuristic digital infrastructure"
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="relative z-10 text-center px-6">
+            <h1 className="text-6xl font-extrabold tracking-tight text-white sm:text-8xl drop-shadow-lg">
+              Future One
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-zinc-200 max-w-2xl mx-auto drop-shadow">
+              A modern full-stack platform powered by Next.js, Express, and Supabase.
+              Fast, scalable, and ready to grow with you.
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-4">
+              <a
+                href="#contact"
+                className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-200 transition-colors"
+              >
+                Get started
+              </a>
+              <a
+                href="#features"
+                className="rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+              >
+                Learn more
+              </a>
+            </div>
           </div>
         </section>
 
