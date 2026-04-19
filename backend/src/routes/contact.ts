@@ -1,5 +1,5 @@
 import { Router, Request, Response } from "express";
-import { supabase } from "../lib/supabase";
+import { getSupabase } from "../lib/supabase";
 
 export const contactRouter = Router();
 
@@ -18,7 +18,7 @@ contactRouter.post("/", async (req: Request, res: Response) => {
   }
 
   try {
-    const { data, error } = await supabase
+    const { data, error } = await getSupabase()
       .from("contacts")
       .insert([{ name, email, message }])
       .select()
