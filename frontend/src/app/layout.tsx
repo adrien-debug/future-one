@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Future One",
-  description: "Build the future, one step at a time.",
+  title: "Qatar National Digital Core",
+  description: "The sovereign infrastructure securing, powering, and projecting the nation's digital future.",
 };
 
 export default function RootLayout({
