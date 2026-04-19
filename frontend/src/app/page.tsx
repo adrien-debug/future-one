@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import Image from "next/image";
 
 export default function Home() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -44,15 +43,16 @@ export default function Home() {
 
       <main className="flex-1">
         <section className="relative flex items-center justify-center min-h-[80vh] overflow-hidden">
-          <Image
-            src="/hero.webp"
-            alt="Future One — Futuristic digital infrastructure"
-            fill
-            priority
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-black/50" />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/hero-video.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-black/40" />
           <div className="relative z-10 text-center px-6">
             <h1 className="text-6xl font-extrabold tracking-tight text-white sm:text-8xl drop-shadow-lg">
               Future One
