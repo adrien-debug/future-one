@@ -75,7 +75,23 @@ Sections:
 ### 3. Notion workspace
 Root page: [Qatar National Digital Core — Project Documentation](https://www.notion.so/3473b50cf49b81c19245d54f17c0957b)
 
-Target architecture (in progress):
+**Current structure** (landing site documentation):
+
+**Documentation Pages**:
+- 🎯 [Vision & Stratégie](https://www.notion.so/3483b50cf49b813b9d32c59c7a0f9a1b) — Vision nationale, objectifs stratégiques, impact attendu
+- ⚙️ [Architecture Technique](https://www.notion.so/3483b50cf49b81d0bec5ee573da3ed8f) — Stack complet, diagrammes, security, scaling
+- 📊 [Capabilities & Features](https://www.notion.so/3483b50cf49b8174b627d2d7351f60dd) — Fonctionnalités, API endpoints, roadmap
+- 🎨 [UX/UI Design System](https://www.notion.so/3483b50cf49b815b9528e1e01ac4d7a2) — Palette, typographie, composants, animations
+- 📅 [Roadmap & Planning](https://www.notion.so/3483b50cf49b81da9d22cbd7ed169f58) — Planning 2026-2027, milestones, budget
+- 🤖 [LLM Context & Rules](https://www.notion.so/3483b50cf49b815b9964e32de27067cf) — Quick ref agents IA, commandes, troubleshooting
+- 🎯 [Décisions & Focus](https://www.notion.so/3483b50cf49b815cba50ee9228d585a7) — ADRs, trade-offs, métriques de succès
+
+**Operational Databases**:
+- 📋 [Legal & Compliance](https://www.notion.so/4182edd89cc84c6ab2c4021773525d7f) — Licences, certifications, audits (SOC 2, ISO 27001)
+- 👥 [Employés & Resources](https://www.notion.so/7a05ae2757374c84a9b1001bdf2b67e4) — RH, compétences, allocation départements
+- 🏭 [Construction & Site](https://www.notion.so/c9a10e1fbaa44f239e43c2a2f4b51aee) — Suivi construction datacenter physique, phases, métiers
+
+**Physical datacenter documentation** (original):
 - `📐 Truth Tree & Agent Manual` — agent-first manual & axioms protocol
 - `🔒 truth_axioms` — 31 immutable atomic facts (verified)
 - `🎯 Programme National` — vision, strategy, roadmap
@@ -160,6 +176,9 @@ CREATE POLICY "Allow service role select" ON public.contacts
 - [x] Executive briefing v1.1 generated & audited (`docs/qatar-digital-core-briefing.html`)
 - [x] Corporate structure defined (HoldCo + AssetCo + OpCo + IPCo + ServiceCo, all Qatar QFC/QFZ)
 - [x] Truth tree architecture designed (12 functional domains, 26 databases, 31 axioms)
+- [x] **Notion workspace structured** — 7 doc pages + 3 operational databases created
+- [x] **High-quality design** — Realistic data center visuals, refined institutional aesthetic
+- [x] **All databases populated** — Initial data for Legal, Employees, Construction tracking
 
 ### In progress
 - [ ] Notion workspace ingestion (Phase A→H)
